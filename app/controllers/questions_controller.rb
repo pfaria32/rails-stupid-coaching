@@ -1,6 +1,9 @@
 class QuestionsController < ApplicationController
 
   def ask
+  end
+
+  def answer
     @answer = ""
     @ask = params[:ask].to_s
     @answer = coach_answer
@@ -12,5 +15,4 @@ class QuestionsController < ApplicationController
     return "" if @ask.upcase == 'I AM GOING TO WORK RIGHT NOW!'
     return 'I dont care, get dressed and go to work!'
   end
-
 end
